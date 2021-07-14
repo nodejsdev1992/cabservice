@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  cabservice:
+    network_mode: host
+    build: .
+    depends_on:
+      - "mongoDb"
+  mongoDb:
+    image: mongo
+    network_mode: host
+    logging:
+      driver: none
